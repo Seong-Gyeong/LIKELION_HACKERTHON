@@ -1,9 +1,12 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>untitled</title>
+    {% load static %}
     <link rel="stylesheet" href="{% static 'css/cloth.css' %}" type="text/css">
 </head>
 
@@ -17,8 +20,8 @@
                 <li class="nav_item">
                     <a href="contacts.html" class="nav">Contacts</a>
                 </li>
-                <a href="cart.html"><img src="./shopping-cart.png" alt="cart" width="30" height="30" class="icon"></a>
-                <a href="my_page.html"><img src="./person.png" alt="my_page" width="30" height="30" class="icon"></a>
+                <a href="cart.html"><img src="{% static 'image/shopping-cart.png' %}" alt="cart" width="30" height="30" class="icon"></a>
+                <a href="my_page.html"><img src="{% static 'image/person.png' %}" alt="my_page" width="30" height="30" class="icon"></a>
             </ul>
         </div> 
 
@@ -27,7 +30,7 @@
         <div id="header">
             <ul class="group_menu">
                 <li class="menu_item">
-                    <a href="home.html"><img src="./basiclogo_E_H.png" alt="untitled" width="200" height="30" class="img"></a>
+                    <a href="home.html"><img src="{% static 'image/basiclogo_E_H.png' %}" alt="untitled" width="200" height="30" class="img"></a>
                 </li>
                 <li class="menu_item">
                     <a href="cloth.html" class="menu">의류</a>
@@ -52,13 +55,13 @@
 
         <div id="container">
             <div class="side-bar">
-                <img src="./basiclogo_E_H.png" alt="untitled" width="200" height="30">
+                <img src="{% static 'image/basiclogo_E_H.png'%}" alt="untitled" width="200" height="30">
             </div>
             <div class="ing-post">
-                <img src="./basiclogo_E_H.png" alt="untitled" width="200" height="30">
+                <img src="{% static 'image/basiclogo_E_H.png' %}" alt="untitled" width="200" height="30">
             </div>
             <div class="post">
-                <img src="./basiclogo_E_H.png" alt="untitled" width="200" height="30">
+                <img src="{% static 'image/basiclogo_E_H.png' %}" alt="untitled" width="200" height="30">
             </div>         
         </div>
 
@@ -99,7 +102,7 @@
         <div id="empty"></div>
         
         <div id="footer-logo">
-            <img src="./basiclogo_E_H_W.png" alt="untitled" width="100" height="15">
+            <img src="{% static 'image/basiclogo_E_H_W.png'%}" alt="untitled" width="100" height="15">
             <p>이화여자대학교 멋쟁이사자처럼</p>
         </div>
     </div> 

@@ -70,3 +70,9 @@ def add_comment_to_post(request,blog_id):
             form=CommentForm()
 
     return render(request,'add_comment_to_post.html',{'form':form})
+
+def affiliation(request):
+    return render(request,'affiliation.html')
+
+def cloth(request):
+    return render(request,'cloth.html')

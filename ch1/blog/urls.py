@@ -40,5 +40,7 @@ urlpatterns = [
     path('delete/<int:blog_id>',blog.views.delete,name='delete'),
     path('edit/<int:blog_id>',blog.views.edit,name='edit'),
     path('update/<int:blog_id>',blog.views.update,name='update'),
-    path('<int:blog_id>/comment',blog.views.add_comment_to_post,name='add_comment_to_post')
+    path('<int:blog_id>/comment',blog.views.add_comment_to_post,name='add_comment_to_post'),
+    path('affiliation/',blog.views.affiliation,name='affiliation'),
+    path('cloth/',blog.views.cloth,name='cloth'),
 ]
