@@ -1,0 +1,16 @@
+{%extends "base.html" %}
+{%load widget_tweaks%}
+
+{%block title%}logged_out.html{%endblock%}
+
+{%block content%}
+    <h1>로그아웃 되었습니다.</h1>
+    <br>
+    <div>
+        <i class="fas fa-quote-left"></i>
+        <span class="h6">&ensp; 오늘도 웹사이트를 이용해주셔서 감사합니다. &ensp;</span>
+        <i class="fas fa-quote-right"></i>
+    </div>
+
+    <p class="font-italic"><a href="{% url 'login' %}">다시 로그인하기</a></p>
+{%endblock%}

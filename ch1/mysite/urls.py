@@ -14,10 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import include,path
+from django.urls import path,include
 import blog.views
 
 from bookmark.views import BookmarkLV,BookmarkDV
+from templates.views import HomeView,UserCreateDoneTV,UserCreateView
 #뷰 종류: LV:ListView(예: 게시판 글 목록 전체)/DV:DetailView(예 : 게시판의 특정 글 상세 내용)
 
 urlpatterns = [
@@ -28,6 +29,10 @@ urlpatterns = [
     #BookmarkLV.as_view()로 URL에 맞는 View를 불러온다. 
     # name은 URL 패턴의 이름
     path('bookmark/',include('bookmark.urls')),
+    path('accounts/',include('django.contrib.auth.urls')),
+    path('accounts/register/',UserCreateView.as_view(),name='register'),
+    path('accounts/register/done/',UserCreateDoneTV.as_view(),name='register_done'),
+    path('', HomeView.as_view(), name='home'),
 
     #Blog
     #path('',blog.views.home,name='home'),

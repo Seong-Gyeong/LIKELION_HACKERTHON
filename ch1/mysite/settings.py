@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'bookmark.apps.BookmarkConfig',
     'blog.apps.BlogConfig',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,4 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
+LOGIN_REDIRECT_URL='/'

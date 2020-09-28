@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404,redirect
-from .models import Blog
+from .models import Blog,Hashtag
 from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 from .forms import CommentForm
@@ -36,6 +36,13 @@ def create(request):
     blog.pub_date=timezone.datetime.now()
     blog.save()
     #blog라는 객체에 넣어줬던 내용들을 데이터베이스에 저장해라
+
+    hashtags=request.GET['hashtags']
+    hashtag=hashtags.split(",")
+    for tag in hashtag:
+        ht=Hashtag.objects.get_or_create(name=tag)
+        blog.hashtag.add(ht[0])
+
     return redirect('/blog/'+str(blog.id))
 
 def delete(request,blog_id):
