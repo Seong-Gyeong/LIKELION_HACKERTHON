@@ -23,6 +23,7 @@ from templates.views import HomeView,UserCreateDoneTV,UserCreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('polls/',include('polls.urls')),
     #class-based views
     #path('bookmark/',BookmarkLV.as_view(),name='index'),
     #path('bookmark/<int:pk>',BookmarkDV.as_view(),name='detail'),
